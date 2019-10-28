@@ -2,7 +2,7 @@ language: c
 
 # explicitly request container-based infrastructure
 sudo: false
-
+dist: bionic
 env:
   global:
     secure: "kbkJf+ukAlZMIcbTD/jIGt6p51nkm2VERZ7jHKQ0betHPyQtBz7Ly43bge4oggRP6s9cDoobFSMendQHTuV5Kyv+BHnQTBpReryOzFMqP3Bm0ZGlZzbn+v2Z1HisDIHGK2kLk3iQyO4S8+Pc/yqbJYVf4iUxh+tUoB11/aCmE3k="
@@ -16,6 +16,7 @@ cache:
 
 addons:
   apt:
+    update: true
     sources:
     - ubuntu-toolchain-r-test
 # blocked by https://github.com/travis-ci/apt-source-whitelist/issues/149
